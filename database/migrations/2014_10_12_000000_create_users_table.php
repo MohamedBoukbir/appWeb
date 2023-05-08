@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('firstName')->nullable();
             $table->string('lastName')->nullable();
-            $table->string('username');
+            $table->string('username')->unique();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('type')->default('candidat');

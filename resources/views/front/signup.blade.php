@@ -89,7 +89,7 @@
                                 <form action="{{ route('register') }}" method="POST">
                                     @csrf
                                     <div class="field input-field">
-                                        <input id="username" type="text" placeholder="Username" class="input" @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>
+                                        <input id="username" type="text" placeholder="Username" class="input @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>
                                         @error('username')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -97,7 +97,7 @@
                                          @enderror
                                     </div>
                                     <div class="field input-field">
-                                        <input type="email"  id="email" placeholder="Email" class="input"  @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                        <input type="email"  id="email" placeholder="Email" class="input  @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
                                         @error('email')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -106,7 +106,7 @@
                                     
                                     </div>
                                     <div class="field input-field">
-                                        <input id="password" type="password" placeholder="Create password" class="password" @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                        <input id="password" type="password" placeholder="Create password" class="password @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
                                         @error('password')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>

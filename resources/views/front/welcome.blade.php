@@ -68,9 +68,9 @@
                     </div>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
-                <a href="{{ route('signup') }}" class="btn btn-primary rounded-0 py-4 px-lg-3 d-none d-lg-block"><i
+                <a href="{{ route('register') }}" class="btn btn-primary rounded-0 py-4 px-lg-3 d-none d-lg-block"><i
                         class="fa fa-user me-3"></i>Sign Up</a>
-                <a href="{{ route('signin') }}" class="btn btn-primary rounded-0 py-4 px-lg-3 d-none d-lg-block ">Sign In<i
+                <a href="{{ route('login') }}" class="btn btn-primary rounded-0 py-4 px-lg-3 d-none d-lg-block ">Sign In<i
                         class="fa fa-arrow-right ms-3"></i></a>
             </div>
         </nav>

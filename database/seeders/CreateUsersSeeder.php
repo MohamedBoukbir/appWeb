@@ -21,13 +21,15 @@ class CreateUsersSeeder extends Seeder
         DB::table('users')->insert([
             [ 'firstName' =>'Admin',
               'lastName'=>'Admin',
-              'email' =>'admin@gmail.com',
+              'username'=>'Admin1',
+              'email' =>'admin@homehelp.org',
               'password' =>bcrypt('admin'),
               'type'=>'admin',
         ],
             [ 
                    'firstName' =>'candidat',
                    'lastName'=>'candidat',
+                   'username'=>'candidat1',
                    'email'=>'candidat@gmail.com',
                    'type'=>'candidat',
                    'password'=>bcrypt('candidat')
@@ -35,6 +37,7 @@ class CreateUsersSeeder extends Seeder
                [
                             'firstName' =>'famille',
                             'lastName'=>'famille',
+                            'username'=>'famille1',
                             'email'=>'famille@gmail.com',
                             'type'=>'famille',
                             'password'=>bcrypt('famille'),

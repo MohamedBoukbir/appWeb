@@ -61,7 +61,7 @@ class LoginController extends Controller
                 return redirect()->route('famille.home');
             }
             else{
-                return redirect()->route('home');
+                return redirect()->route('candidat.home');
             }
         }
         else{

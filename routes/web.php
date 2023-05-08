@@ -17,22 +17,29 @@ use App\Http\Controllers\AnnonceController;
 |
 */
 
-Route::get('/', function () {
-    return view('auth.login');
-});
+// Route::get('/homehelp/signin', function () {
+//     return view('auth.login');
+// });
+
+// Route::get('/', function () {
+//   return view('welcome');
+// });
+// Route::get('/homehelp/signup', function () {
+//   return view('auth.register');
+// });
 
 
 Route::get('/homehelp', function () {
   return view('front.welcome');
 });
 
-Route::get('/homehelp/signup', function () {
-  return view('front.signup');
-})->name('signup');
+// Route::get('/homehelp/signup', function () {
+//   return view('front.signup');
+// })->name('signup');
 
-Route::get('/homehelp/signin', function () {
-  return view('front.signin');
-})->name('signin');
+// Route::get('/homehelp/signin', function () {
+//   return view('front.signin');
+// })->name('signin');
 
 Auth::routes();
 
@@ -41,7 +48,7 @@ Auth::routes();
    ///// Route candidat////////////////////////////////////////////////////////////
 Route::middleware(['auth', 'user-access:candidat'])->group(function () {
   
-    Route::get('/home', [HomeController::class, 'index'])->name('home');
+    Route::get('/candidat/home', [HomeController::class, 'index'])->name('candidat.home');
     Route::resource('candidats', CandidatController::class);
 
     // Route::get('/homehelp/signin', function () {
