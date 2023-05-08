@@ -17,7 +17,7 @@ use App\Http\Controllers\AnnonceController;
 |
 */
 
-Route::get('/hom', function () {
+Route::get('/', function () {
     return view('auth.login');
 });
 
