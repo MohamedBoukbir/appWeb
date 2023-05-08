@@ -73,15 +73,19 @@
                 </div>
                 <a href="{{ route('register') }}" class="btn btn-primary rounded-0 py-4 px-lg-3 d-none d-lg-block"><i
                         class="fa fa-user me-3"></i>Sign Up</a>
-                <a href="{{ route('login') }}" class="btn btn-primary rounded-0 py-4 px-lg-3 d-none d-lg-block ">Sign In<i
-                        class="fa fa-arrow-right ms-3"></i></a>
+                <a href="{{ route('login') }}" class="btn btn-primary rounded-0 py-4 px-lg-3 d-none d-lg-block ">Sign
+                    In<i class="fa fa-arrow-right ms-3"></i></a>
             </div>
         </nav>
         <!-- Navbar End -->
-        <div class="container-xxl py-5" >
+        {{-- WIZARD --}}
+        <a href="{{ route('wizard') }}">click</a>
+        {{-- END --}}
+        <div class="container-xxl py-5">
             <div class="container">
                 <div class="row py-5">
-                    <section class="container forms" style="height: 60vh;width: 100%;display: flex; align-items: center; justify-content: center;column-gap: 30px;">
+                    <section class="container forms"
+                        style="height: 60vh;width: 100%;display: flex; align-items: center; justify-content: center;column-gap: 30px;">
                         <!-- Signup Form -->
                         <div class="form signup">
                             <div class="form-content">
@@ -89,41 +93,50 @@
                                 <form action="{{ route('register') }}" method="POST">
                                     @csrf
                                     <div class="field input-field">
-                                        <input id="username" type="text" placeholder="Username" class="input @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>
+                                        <input id="username" type="text" placeholder="Username"
+                                            class="input @error('username') is-invalid @enderror" name="username"
+                                            value="{{ old('username') }}" required autocomplete="username" autofocus>
                                         @error('username')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                         @enderror
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
                                     <div class="field input-field">
-                                        <input type="email"  id="email" placeholder="Email" class="input  @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                        <input type="email" id="email" placeholder="Email"
+                                            class="input  @error('email') is-invalid @enderror" name="email"
+                                            value="{{ old('email') }}" required autocomplete="email">
                                         @error('email')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                         @enderror
-                                    
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+
                                     </div>
                                     <div class="field input-field">
-                                        <input id="password" type="password" placeholder="Create password" class="password @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                        <input id="password" type="password" placeholder="Create password"
+                                            class="password @error('password') is-invalid @enderror" name="password"
+                                            required autocomplete="new-password">
                                         @error('password')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                       @enderror
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
                                     <div class="field input-field">
-                                        <input   id="password-confirm" type="password" placeholder="Confirm password" class="password" name="password_confirmation" required autocomplete="new-password">
+                                        <input id="password-confirm" type="password" placeholder="Confirm password"
+                                            class="password" name="password_confirmation" required
+                                            autocomplete="new-password">
                                         {{-- <i class='bx bx-hide eye-icon'></i> --}}
-                                      
+
                                     </div>
                                     <div class="field button-field">
                                         <button>Signup</button>
                                     </div>
                                 </form>
                                 <div class="form-link">
-                                    <span>Already have an account? <a href="#" class="link login-link">Login</a></span>
+                                    <span>Already have an account? <a href="#"
+                                            class="link login-link">Login</a></span>
                                 </div>
                             </div>
                             <div class="line"></div>
@@ -231,9 +244,15 @@
     <script src="{{ asset('js/new-main.js') }}"></script>
     <script src="{{ asset('js/states.js') }}"></script>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </body>

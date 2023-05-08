@@ -110,4 +110,23 @@ Route::middleware(['auth', 'user-access:famille'])->group(function () {
 
 });
 
-//////////////////////////// end route route famille     /////////////////////////////////////////////////
+//////////////////////////// end route route famille     /////////////////////////////////////////////////\
+
+
+
+
+
+
+Route::get('/my-account-dashboard', function () {
+  return view('front.dashboard-account');
+})->name('account-dashboard');
+
+Route::get('/my-account-applications', function () {
+  return view('front.applicant');
+})->name('account-applications');
+Route::get('/my-account-conversation', function () {
+  return view('front.conversation');
+})->name('account-conversation');
+Route::get('/my-account-saves', function () {
+  return view('front.liked');
+})->name('account-saved-profiles');
