@@ -51,7 +51,7 @@ Route::middleware(['auth', 'user-access:candidat'])->group(function () {
     Route::get('/candidat/home', [HomeController::class, 'index'])->name('candidat.home');
     Route::resource('candidats', CandidatController::class);
 
-    // Route::get('/homehelp/signin', function () {
+    // Route::get('/homehelppp/signin', function () {
     //   return view('front.account');
     // })->name('signin');
     
